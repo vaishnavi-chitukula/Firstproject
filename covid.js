@@ -14,10 +14,12 @@ function covidDetails()
         let active=row.insertCell(-1);
         let deaths=row.insertCell(-1);
         let province=row.insertCell(-1);
+        let recovered=row.insertCell(-1);
             date.innerHTML = "Date"
             active.innerHTML = "Active"
             deaths.innerHTML = "Deaths"
             province.innerHTML ="Province"
+            recovered.innerHTML = "Recovered"
             let result = JSON.parse(this.response);
         result.forEach(day=> {
             let row= table.insertRow(-1);
@@ -25,10 +27,12 @@ function covidDetails()
             let active= row.insertCell(-1)
             let deaths= row.insertCell(-1)
             let province= row.insertCell(-1)
+            let recovered = row.insertCell(-1)
                 date.innerHTML=day.Date
                 active.innerHTML=day.Active
                 deaths.innerHTML=day.Deaths
                 province.innerHTML=day.Province
+                recovered.innerHTML=day.Recovered
         });
     }
     dispTable=document.getElementById("div")
